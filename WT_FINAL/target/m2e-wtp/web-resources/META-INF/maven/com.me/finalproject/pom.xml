@@ -129,6 +129,11 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>5.1.0.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160212</version>
+		</dependency>
 	</dependencies>
     <build>
         <plugins>

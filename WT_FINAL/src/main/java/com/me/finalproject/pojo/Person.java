@@ -24,7 +24,7 @@ public class Person {
 	@GeneratedValue
 	@Column(name="personID",unique = true, nullable=false)
 	private long personID;
-	
+	//default constructor required to configured it as bean
 	public Person(){
 		
 	}
