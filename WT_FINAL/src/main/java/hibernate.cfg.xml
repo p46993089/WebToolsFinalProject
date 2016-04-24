@@ -11,5 +11,6 @@
 		<property name="hibernate.show_sql">true</property>
 		<mapping class="com.me.finalproject.pojo.Person" />
 		<mapping class="com.me.finalproject.pojo.User" />
+		<mapping class="com.me.finalproject.pojo.Warehouse" />
 	</session-factory>
 </hibernate-configuration>

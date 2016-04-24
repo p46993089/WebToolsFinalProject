@@ -3,13 +3,14 @@ package com.me.finalproject.pojo;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Person")
+@Table(name="person")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class Person {
 	@Column(name="personFirstName", nullable=false)
@@ -21,7 +22,7 @@ public class Person {
 	@Column(name="companyAddress")
 	private String companyAddress;
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="personID",unique = true, nullable=false)
 	private long personID;
 	//default constructor required to configured it as bean

@@ -16,16 +16,27 @@ public class User extends Person{
 	private String password;
 	@Column(name="catcode",nullable=false)
 	private String category;
+	@Column(name="status")
+	private String status;
 	public User(){
 	}
 	
-	public User(String username, String password, String category) {
+	public User(String username, String password, String category,String status) {
 		this.username = username;
 		this.password = password;
 		this.category = category;
+		this.status = status;
 	}
 
 	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
 	public String getUsername() {
 		return username;
 	}

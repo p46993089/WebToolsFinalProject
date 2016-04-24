@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.me.finalproject.DAO.LoginDAO;
+import com.me.finalproject.pojo.Person;
 import com.me.finalproject.pojo.User;
 
 /**
@@ -52,13 +53,14 @@ public class LoginController{
 			
 				User validUser =(User) loginDAO.getUserName(user.getUsername(),user.getPassword());
 				String category = validUser.getCategory();
-				if(category.equals("admin")){
-					HttpSession session = request.getSession();
-					if(session == null){
-						session = request.getSession(true);
-					}
-					session.setAttribute("adminuser", user.getFirstName());
+				if(category.equalsIgnoreCase("Admin")){
+					HttpSession session = request.getSession(true);
+					session.setAttribute("adminuser", validUser.getFirstName());
 					return "admin";
+				}else if(category.equalsIgnoreCase("HOEMPLOYEE")){
+					HttpSession session = request.getSession(true);
+					session.setAttribute("hoemployee", validUser.getFirstName());
+					return "generalEmployee";
 				}
 				else{
 					return null;
@@ -67,7 +69,11 @@ public class LoginController{
 	}
 	//method to initialize form and setting model attribute user
 	@RequestMapping(value ="/login.htm",method = RequestMethod.GET)
-	public String initializeForm(@ModelAttribute("user") User user, BindingResult result) {
+	public String initializeForm(@ModelAttribute("user") User user, BindingResult result,HttpServletRequest request) {
+		HttpSession session = request.getSession(false);
+		if(session != null){
+			session.invalidate();
+		}
 		return "login";
 	}
 }
