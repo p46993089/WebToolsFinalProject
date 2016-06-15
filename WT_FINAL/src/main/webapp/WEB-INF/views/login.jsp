@@ -21,7 +21,7 @@
 <div class='container'>
 <div class='row-lg-6' align='left'>
 <div class='col-lg-6' align='left'>
-<img src='C:\Users\Pranay\Desktop\Web Tools Final Project\Northeastern-seal.svg.png' width='340' height='340'>
+<img src='/image/s1.jpg' width='340' height='340'>
 </div>
 </div>
 <div class='row-lg-6' align='left'>
@@ -35,7 +35,7 @@
 </div>
 <div class='form-group'>
 <label for='password' align='left'>Password</label>
-<springform:input  path="password" size="30" /><font color="red"><springform:errors path="password" /></font>
+<springform:password  path="password" size="30" /><font color="red"><springform:errors path="password" /></font>
 </div>
 <br></br>
 <div class='form-group'>

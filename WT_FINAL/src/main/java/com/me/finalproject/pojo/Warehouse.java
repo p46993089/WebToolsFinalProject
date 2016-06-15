@@ -1,10 +1,15 @@
 package com.me.finalproject.pojo;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +31,7 @@ public class Warehouse {
 	private String warehouseType;
 	@Column(name="contactNumber")
 	private String contactNumber;
+	
 	public Warehouse() {
 	}
 	public Warehouse(String warehouseName, int warehouseID, String address, String city, String state,

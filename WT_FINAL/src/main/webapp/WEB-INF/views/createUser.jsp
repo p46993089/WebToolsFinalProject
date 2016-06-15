@@ -80,6 +80,7 @@ function checkUserName(){
 <option value="ADMIN">ADMIN</option>
 <option value="HOEMPLOYEE">HOEMPLOYEE</option>
 <option value="VENDOR">VENDOR</option>
+<option value="qcEmployee">QCEmployee</option>
 <option value="WAREHOUSE EMPLOYEE">WAREHOUSEEMP</option>
 </select>
 </td>

@@ -12,5 +12,6 @@
 		<mapping class="com.me.finalproject.pojo.Person" />
 		<mapping class="com.me.finalproject.pojo.User" />
 		<mapping class="com.me.finalproject.pojo.Warehouse" />
+		<mapping class="com.me.finalproject.pojo.Order" />
 	</session-factory>
 </hibernate-configuration>

@@ -62,8 +62,17 @@ public class LoginController{
 					session.setAttribute("hoemployee", validUser.getFirstName());
 					return "generalEmployee";
 				}
+				else if(category.equalsIgnoreCase("VENDOR")){
+					HttpSession session = request.getSession(true);
+					session.setAttribute("vendorName", validUser.getFirstName());
+					session.setAttribute("vendor", validUser.getUsername());
+					return "vendorLogin";
+				}
 				else{
-					return null;
+					HttpSession session = request.getSession(true);
+					session.setAttribute("qcName",validUser.getFirstName());
+					session.setAttribute("qc",validUser.getUsername());
+					return "qcHomePage";
 				}
 		}
 	}

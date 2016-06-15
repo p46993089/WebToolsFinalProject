@@ -6,5 +6,6 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="userValidator" class="com.me.finalproject.controller.UserValidator"></bean>
 	<bean id="userDAO" class = "com.me.finalproject.DAO.LoginDAO"></bean>
+	<bean id="orderDAO" class="com.me.finalproject.DAO.OrderDAO"></bean>
 		
 </beans>
